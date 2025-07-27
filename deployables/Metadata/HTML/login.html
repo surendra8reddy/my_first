@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
-<style>
-</style>
-<script src=""></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Login | DevOps App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" required placeholder="Enter your email">
+        <span class="error" id="emailError"></span>
+      </div>
 
-<div class="main_block_a">
-    <div class="block_a" style="border:1px solid black;margin:320px 450px; width:350px; height:300px">
-        <div class="blocka1" style="padding-top:10px">
-            <span>Please Login </span>
+      <div class="form-group">
+        <label>Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" required placeholder="Enter your password">
+          <span id="togglePassword" class="toggle">👁️</span>
         </div>
-        <div style="padding-left:50px;">
-        <div class="blocka2">
-            <h3>Email:</h3>
-            <input type="text" placeholder="Please enter Email">
-        </div>
-        <div class="blocka3">
-            <h3>Password:</h3>
-            <input type="text" placeholder="Password">
-        </div>
-        </div>
-        <div>
-            <button>Login</button>
-            <button>Cancel</button>
-        </div>
-    </div>
- 
-</div>
+        <span class="error" id="passwordError"></span>
+      </div>
 
+      <div class="form-options">
+        <label><input type="checkbox" id="remember"> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
